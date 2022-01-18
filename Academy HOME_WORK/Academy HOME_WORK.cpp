@@ -309,7 +309,7 @@ Human* HumanFactory(const string& type)
 	if (type.find("Graduate") != std::string::npos)return new Graduate("", "", 0, "", "", 0, 0, "");
 }
 //#define INHERITANCE_CHEK
-#define SAFE_TO_FILE
+//#define SAFE_TO_FILE
 
 int main()
 {
