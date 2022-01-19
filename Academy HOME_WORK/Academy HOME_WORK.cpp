@@ -8,7 +8,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-
 #define HUMAN_TAKE_PARAMETRS const std::string& last_name, const std::string& first_name, unsigned int age
 #define HUMAN_GIVE_PARAMETRS last_name, first_name, age
 
@@ -309,13 +308,12 @@ Human* HumanFactory(const string& type)
 	if (type.find("Graduate") != std::string::npos)return new Graduate("", "", 0, "", "", 0, 0, "");
 }
 //#define INHERITANCE_CHEK
-//#define SAFE_TO_FILE
+#define SAFE_TO_FILE
 
 int main()
 {
 	setlocale(LC_ALL, "");
-
-#ifdef  INHERITANCE_CHEK
+#ifdef INHERITANCE_CHEK
 	Human human("Connor", "John", 18);
 	human.print();
 
@@ -364,6 +362,7 @@ int main()
 	}
 #endif // SAFE_TO_FALE
 
+
 	Human** group = nullptr;
 	int g = 0;
 
@@ -398,8 +397,9 @@ int main()
 		delete[] group[i];
 	}
 
-	delete[]group;
 	fin.close();
+	system("start notepad file.txt");
+	delete[]group;
 
 
 }
